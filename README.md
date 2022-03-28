@@ -1,3 +1,3 @@
 # forexmontior
 
-![SEK-INR Monitor][fig/current.png]
+![SEK-INR Monitor](fig/current.png)
