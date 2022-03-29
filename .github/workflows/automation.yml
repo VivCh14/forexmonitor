@@ -3,7 +3,7 @@ name: Forex Monitor Automation
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
     - cron: "0 19 * * 1-5" # Runs at 1900 (UTC) every workday (Check https://crontab.guru/)
 
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout the repo
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         with:
           fetch-depth: 1
 
