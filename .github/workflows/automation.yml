@@ -22,7 +22,7 @@ jobs:
           python-version: '3.8'
 
       - name: Install Python packages
-        run: pip install matplotlib numpy pandas
+        run: pip install matplotlib numpy pandas requests
 
       - name: Run Automation
         run: |
