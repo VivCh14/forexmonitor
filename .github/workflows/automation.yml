@@ -28,3 +28,10 @@ jobs:
         run: |
           cd src
           python run_forex.py ${{ secrets.FOREX_KEY }}
+
+      - name: Update the repo
+        run: |
+          git config --global user.name 'VivCh14'
+          git config --global user.email 'VivCh14@users.noreply.github.com'
+          git commit -am "Update graphs via actions"
+          git push
