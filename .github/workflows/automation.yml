@@ -25,7 +25,7 @@ jobs:
         run: pip install matplotlib numpy pandas
 
       - name: Change dir
-        run: cd ../../src
+        run: cd src
 
       - name: Run Automation
         run: python run_forex.py ${{ secrets.FOREX_KEY }}
