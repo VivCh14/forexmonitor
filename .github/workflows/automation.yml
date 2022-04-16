@@ -22,12 +22,12 @@ jobs:
           python-version: '3.8'
 
       - name: Install Python packages
-        run: pip install matplotlib numpy pandas requests
+        run: pip install matplotlib numpy pandas requests tensorflow
 
       - name: Run Automation
         run: |
           cd src
-          python run_forex.py ${{ secrets.FOREX_KEY }}
+          python main.py ${{ secrets.FOREX_KEY }}
 
       - name: Update the repo
         run: |
