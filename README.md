@@ -1,11 +1,11 @@
-# Exchange Rate Predictor
+# Exchange Rate Forecaster
 
 ## Description
 
 - Daily foreign exchange data is pulled from a standard public REST API for the last 100 days.
 - The data contains daily `open`, `high`, `low` and `close` rates for the SEK-INR combination.
 - A machine learning model based on the LSTM neural network is used for training, validating
-and testing all the data available from 2014. The saved model is then used to make predictions
+and testing all the data available from 2014. The model is saved once and then used to make predictions
 given the latest 30 days data. The *grey* region shows the prediction for the next day.
 - `Tensorflow` is the main driver for bulding the LSTM model.
 - Currently the code from model building is not made available but will be once it has been
