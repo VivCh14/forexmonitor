@@ -44,22 +44,3 @@ def api_caller():
     df = df.astype({column:np.float64 for column in df.columns},errors='raise')
     
     return df
-
-
-"""
-Computes the candlestick data
-"""
-def candlestickdata (df):
-    
-    """define up and down prices"""
-    # DataFrame containing close>=open : rate gone up
-    up = df[df.close>=df.open]
-    # DataFrame containing close<open : rate gone down
-    down = df[df.close<df.open]
-
-
-    #Need date recognized by matplotlib    
-    up_dates = pd.to_datetime(up.index, format='%Y-%m-%d')
-    down_dates = pd.to_datetime(down.index, format='%Y-%m-%d')
-    
-    return up, down, up_dates, down_dates
