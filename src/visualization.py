@@ -12,12 +12,13 @@ class CandlestickChart():
     """Plot Candlestick chart for the
     given data. Should have OHLC columns."""
 
-    def __init__(self, record=None,predictions=None):
+    def __init__(self, record=None, predictions=None, savefig=True):
         
         assert record is not None,"Provide atleast one data-set!"
 
         self.record = record
         self.predictions = predictions
+        self.savefig = savefig
 
         # up,down prices and dates
         self.up = []
@@ -142,4 +143,5 @@ class CandlestickChart():
 
         plt.legend(handles=record_handle+pred_handle)
 
-        fig.savefig("../fig/current.png", bbox_inches='tight', dpi=600)
+        if self.savefig:
+            fig.savefig("../fig/current.png", bbox_inches='tight', dpi=600)
