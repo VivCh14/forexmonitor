@@ -125,7 +125,7 @@ class CandlestickChart():
 
             date_time = self.predictions.index
 
-            # highlight the nexrday of prediction
+            # highlight the nextday of prediction
             ax.axvspan(date_time[-2:][:-1], date_time[-1:]+datetime.timedelta(days=1), facecolor='0.75', alpha=0.5)
 
             pred_patch1 = mpatches.Patch(color=col1, label='$Predicted \\uparrow$')
